@@ -1,0 +1,186 @@
+--> Javascript :- It is an client side scripting language which is used to apply some dynamic features in the application like animations , event handling , validations , dom manupulation etc.
+  -> In web browsers , JavaScript consists of 3 main parts 
+    1. EcmaScript provides the core functionality 
+    2. DOM provides interfaces for interacting with elements on web pages.
+    3. BOM provides the browser API for interacting with the web browser.
+    -> Old JavaScript is known as vanilla JavaScript or es 5 
+     -> How JavaScript program is executed 
+     When a web page is loaded i.e Html and Css have been downloaded , the JavaScript engine in the web browser executed the JavaScript code.The JavaScript code then modifies the Html and Css to update the UI dynamically.
+       -> Chrome : V8 
+       -> Firefox : spider monkey 
+       -> i.e : Chakra 
+       However , modern JavaScript engines are typically implemented as JIT(just-in-time) compilers that compile JavaScript code to bytecode for improved performance.
+       -> EcmaScript 5 (Old JavaScript | Vanilla JavaScript)
+       -> JavaScript is a case sensitive language 
+       -> extension is .js 
+       -> code is write on script tag in a html document.
+       -> How we implement JavaScript 
+         -> internal way 
+           home.html
+           <!Doctype html>
+           <html>
+              <head>
+                
+              </head>
+              <body>
+                <script>
+                   ---
+                 </script>
+              </body>
+           </html>
+        -> external way 
+          first.js 
+            JavaScript code
+           home.html
+           <!Doctype html>
+           <html>
+              <head>
+              </head>
+              <body>
+                <script src="first.js">
+                 </script>
+              </body>
+           </html>
+        -> print | output 
+        document.write("--");//display in the browser 
+        console.log("--");// display in console | debug a code 
+        ** all the JavaScript errors are display in console 
+        -> Concatination (+)
+        -> Comments : to describe the code 
+          single :- // 
+          multiple :- /*  */
+          html :- <!--   -->
+
+        -> Variables :- temp. memory location which hold input data.
+          var varname=value;
+             -> rules to define varname 
+               start with [a-zA-Z] or $ 
+               after it combination of [a-zA-Z0-9_]
+            eg:
+            var empName="anuj";
+            var emp_salary=45678;
+        -> Datatype :- type declaration of variables . in JavaScript datatype allocate at runtime as per the variable value.Thats why JavaScript is loosly type language.
+           number , string , boolean , array , object , null , undefined 
+           -> To find datatype of a variable 
+               typeof varname 
+        -> Operators (to perform operations)
+          -> arthematic :- + , - ,/ ,*,% ,++ , --
+          -> assigment :- = , += , -= , /= ,%= 
+          -> relational :- > , < , >= , <= 
+          -> logical :- && , || , ! 
+          -> comparision 
+             == : only check the values 
+             != 
+             === :- check both values and type 
+             !== 
+             eg:
+              var x=10;
+              var y="10";
+              if(x==y) (true)
+              if(x===y) (false)
+            -> ternary operator :- subsitute of if else 
+              (exp1?true:false)
+
+              eg:
+              var x=10;
+              var y=5;
+              var result=(x>y? " X is greater" : "Y is greater")
+            -> Pop up 
+             alert("--") :- to display a dialoage box with message 
+             confirm() :- for the confermation box 
+             prompt() :- to input data at runtime 
+               -> accept values in the form of string 
+                  -> string into number 
+                    parseInt() 
+                    Number()
+                    parseFloat()
+                    parseString()
+            -> Conditions | Selection (return boolean value)
+             if else 
+             if else if else (more then 2)
+             nested if (if within another if)
+             switch :- multi-decision making (performance is fast as if else )
+
+            --> Task 
+              -> Wap to input 5 subject marks in 5 variables and find total , percentage and grade ? 
+                per > 80   A 
+                per>60 <=80  B 
+                per>45 <=60 C 
+                Fail 
+            -> Looping (Iteration)
+              -> for loop :- 
+                for(i=1; i<=5;i++){
+                    console.log(i)
+                }
+
+              -> while loop :- 
+              i=1;
+              while(i<=5){
+                console.log(i);
+                i++;
+              }
+              -> do while :- 
+              i=1;
+              do{
+                console.log(i)
+                i++
+              }while(i>=5);
+            -> array :- array is used to store multiple values in a single variable of any type.(hetrogenous)
+               var arr=new Array(101,"anuj",6,7);
+                 or 
+               var arr=[101,"anuj",6,7];//(prefer)
+               -> to find the size of an array 
+                 arrname.length
+                 eg:
+                   var arr=[101,"anuj",6,7];
+                   for(i=0; i<arr.length;i++){
+                      console.log(arr[i])
+                   }
+                -> forEach:- used only for an array. loop is going on untill they found null.
+                    var arr=[101,"anuj",6,7];
+                    arr.forEach(function(val){
+                        console.log(val)
+                    })
+            -> Functions :- reusablity 
+              Every function should return a value.
+              Function return only 1 value at a time.
+              -> inbuild | predefined 
+              -> user defined 
+                 -> without argument 
+                 //define
+                    function abc(){
+                         alert("Method Call")
+                    }
+                 //call 
+                    abc()
+                    abc()
+                 -> with argument 
+                  function add(a,b){
+                     return (a+b);
+                  }
+                  var sum=add(10,30);
+            -> Assigment 
+               1- Wap to input 2 values in 2 variables and swap them ?
+                 -> with the help of 3rd variable 
+                 -> without help of 3rd variable 
+                 -> in one line or expression 
+               2. Wap to input a number and find its factorial and also disply the table of the input number ? 
+                 hint 
+                  5*1=5
+                  5*2=10 
+                  ---
+                  5*10=50
+               3. Wap to display febonice series upto 10?
+               4. Wap to input a number , reverse it and also find the sum of the digit of a number ?  
+                 num=1234;
+                 rev=4321;
+                 sum=10;
+              5. Wap to assign 10 values in an array and also assign a single value in a varaible and find this single value is present in array or not ?
+              6. Wap to create a function for a start pattern 
+                eg:
+                   function 5
+                    *
+                  *   *
+                *  *    *
+             *   *   *    *
+          *    *   *    *    *
